@@ -20,7 +20,7 @@ function install_pyxtuml {
     wget -qO - https://github.com/john-tornblom/pyxtuml/archive/master.tar.gz | tar xzf -
 
     cd pyxtuml-master
-    python setup.py build
+    PYTHONPATH=$1 python setup.py build
     cp -r xtuml $1
 }
 
@@ -29,7 +29,7 @@ function install_pyrsl {
     wget -qO - https://github.com/john-tornblom/pyrsl/archive/master.tar.gz | tar xzf -
 
     cd pyrsl-master
-    python setup.py build
+    PYTHONPATH=$1 python setup.py build
     cp -r rsl $1
 }
 
